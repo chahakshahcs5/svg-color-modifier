@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left {
+  border-right: 1px solid #a8a5a5;
+  width: 50%;
+  height: 100%;
+}
+
+.right {
+  width: 50%;
+  height: 95vh;
+  margin: 20px;
+}
+
+.image-container {
+  cursor: pointer;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+#file {
+  display: none;
+}
+
+.svg-image {
+  height: 400px;
+  width: 400px;
+}
+
+#color-container {
+  overflow-y: auto;
+  height: 85%;
+}

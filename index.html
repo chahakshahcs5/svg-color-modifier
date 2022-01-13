@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Color modifier</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <label for="file">
+          <div class="image-container" id="image-container" for="file">
+            <img
+              src="./assets/final.svg"
+              alt=""
+              width="400px"
+              height="400px"
+              id="svg-image"
+            />
+          </div>
+        </label>
+        <div style="margin-left: 20px">Click here to select image</div>
+        <div style="padding-left: 20px; padding-right: 20px">
+          <hr />
+        </div>
+        <div style="margin-left: 50%">Or</div>
+        <div style="margin: 20px">
+          <input
+            type="text"
+            id="url-input"
+            placeholder="Enter image url"
+            style="width: 400px; height: 20px"
+          />
+          <button
+            id="submit-btn"
+            style="width: 100px; height: 25px; cursor: pointer"
+          >
+            Submit
+          </button>
+        </div>
+        <input type="file" id="file" />
+      </div>
+      <div class="right">
+        <div style="margin-bottom: 20px">
+          <label for="colorBy">Get colors by</label>
+          <select name="Get colors by" id="colorBy">
+            <option value="path">All Colors</option>
+            <option value="class">Colors By Class</option>
+          </select>
+          <div style="margin-top: 10px">
+            <label for="imageDownloadBy">Download as</label>
+            <select name="Download as" id="imageDownloadBy">
+              <option value="svg">SVG</option>
+              <option value="png">PNG</option>
+              <option value="jpeg">JPEG</option>
+            </select>
+            <div style="display: none" id="size">
+              <label for="width">Width</label>
+              <input type="text" id="width" style="width: 100px" />
+              <label for="height">Height</label>
+              <input type="text" id="height" style="width: 100px" />
+            </div>
+
+            <button id="download-btn">Download</button>
+            <a id="link" style="text-decoration: none; color: black"></a>
+          </div>
+          <canvas id="canvas" style="display: none"></canvas>
+        </div>
+        <div id="color-container"></div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./imagetracer.js"></script>
+    <script src="https://cdn.cloudmersive.com/jsclient/cloudmersive-validate-client.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/canvg@3.0.4/lib/umd.js"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
